@@ -1,0 +1,19 @@
+﻿{
+  "output_file": "settings.json",
+    "OnlyLive": {
+    "type": "checkbox",
+    "value": false,
+  	"label": "Only when live",
+    "tooltip": "Command is only active when stream is live",
+  	"group": "General"
+  },
+    "Reset": {
+    "type": "button",
+    "label": "Reset Word",
+    "tooltip": "",
+    "function": "Reset",
+    "wsevent": "",
+    "group": "General"
+  },
+
+}
