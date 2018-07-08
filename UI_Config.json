@@ -15,5 +15,13 @@
     "wsevent": "",
     "group": "General"
   },
+    "Clear": {
+    "type": "button",
+    "label": "Clear Word on Overlay",
+    "tooltip": "",
+    "function": "Clear",
+    "wsevent": "",
+    "group": "General"
+  },
 
 }

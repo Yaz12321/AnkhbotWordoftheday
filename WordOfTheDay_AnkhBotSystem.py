@@ -61,7 +61,7 @@ def Init():
     # Load in saved settings
     MySettings = Settings(settingsFile)
     global wordcount
-    wordcount = {}
+    wordcount = {'Empty':0}
 
     # End of Init
     return
@@ -81,7 +81,7 @@ def ReloadSettings(jsonData):
 
 
 global wordcount
-wordcount = {}
+wordcount = {'Empty':0}
 global TopWord
 TopWord = ""
 global TopCount
@@ -89,12 +89,20 @@ TopCount = 0
 
 def Reset():
     global wordcount
-    wordcount = {}
+    wordcount = {'Empty':0}
     global TopWord
     TopWord = ""
     global TopCount
     TopCount = 0
     return
+
+def Clear():
+    path = os.path.dirname(os.path.abspath(__file__))
+    f = open("{}/TopWord.txt".format(path),"w+")
+    f.write("Word of the day is:")
+    f.close()
+    return
+    
         
 def Execute(data):
     path = os.path.dirname(os.path.abspath(__file__))
